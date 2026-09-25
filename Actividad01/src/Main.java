@@ -95,7 +95,7 @@ public class Main {
         System.out.println( men + " " +may );
 
         /*9. Escribe un programa que lee dos números y nos dice cuál es el mayor o si son iguales.*/
-/*
+
         scan = new Scanner(System.in);
         System.out.println("Introduzca el primer numero");
         int nu1 = scan.nextInt();
@@ -103,10 +103,11 @@ public class Main {
         int nu2 = scan.nextInt();
 
         int mayo = Math.max( nu1, nu2 );
-        int mayo =
 
-        System.out.println("El numero" + mayo + "es mayor");
-*/
+        System.out.println("El numero " +mayo + " es mayor");
+        System.out.println("Los numeros son iguales " + (nu1 == nu2));
+
+
         /*10. Escribe un programa que lea tres números distintos y nos diga cuál es el mayor.*/
 
         scan = new Scanner(System.in);
@@ -127,19 +128,19 @@ public class Main {
 
         scan = new Scanner(System.in);
         System.out.println("Introduzca el primer numero");
-        int nu1 = scan.nextInt();
+        int nu111 = scan.nextInt();
         System.out.println("Introduzca el segundo numero");
-        int nu2 = scan.nextInt();
+        int nu112 = scan.nextInt();
 
-        int suma = nu1 + nu2;
-        int res = nu1 - nu2;
-        int multi = nu1 * nu2;
-        int div = nu1 / nu2;
+        int suma1 = nu111 + nu112;
+        int res1 = nu111 - nu112;
+        int multi1 = nu111 * nu112;
+        int div1 = nu111 / nu112;
 
-        System.out.println("La suma es igual a " + suma);
-        System.out.println("La resta es igual a " + res);
-        System.out.println("La multiplicacion es igual a " + multi);
-        System.out.println("La division es igual a " + div);
+        System.out.println("La suma es igual a " + suma1);
+        System.out.println("La resta es igual a " + res1);
+        System.out.println("La multiplicacion es igual a " + multi1);
+        System.out.println("La division es igual a " + div1);
 
 
         /*12. Escribe un programa que lee 2 números y muestra el mayor.*/
@@ -152,9 +153,16 @@ public class Main {
 
         int numero12c = Math.max( numero1, numero2);
 
-        System.out.println("El numero" + numero12c + "es mayor");
+        System.out.println("El numero " + numero12c + " es mayor");
 
         /*13. Escribe un programa que lee un número y me dice si es positivo o negativo
         consideraremos el cero como positivo.*/
+
+        scan = new Scanner(System.in);
+        System.out.println("Introduzca el numero numero");
+        int numero13a = scan.nextInt();
+
+        System.out.println("El numeroe es positivo " + (numero13a >= 0));
+        System.out.println("El numeroe es negativo " + (numero13a < 0));
     }
 }
