@@ -1,4 +1,45 @@
-package PACKAGE_NAME;
+import java.util.Scanner;
 
 public class prueba {
+    static void main(String[] args) {
+
+        int billete5 = 0;
+        int billete10 = 0;
+        int billete20 = 0;
+        int billete50 = 0;
+        int billete100 = 0;
+        int billete200 = 0;
+        int billete500 = 0;
+        int dinero = 0;
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Introduzca la cantidad: ");
+        int cantidad = scan.nextInt();
+
+        for (dinero = 0; dinero + 500 <= cantidad; dinero += 500) {
+            billete500 = billete500 + 1;
+        } for (; dinero + 200 <= cantidad; dinero += 200) {
+            billete200 = billete200 + 1;
+        }for (; dinero + 100 <= cantidad; dinero += 100) {
+            billete100 = billete100 + 1;
+        } for (; dinero + 50 <= cantidad; dinero += 50) {
+            billete50 = billete50 + 1;
+        }for (; dinero + 20 <= cantidad; dinero += 20) {
+            billete20 = billete20 + 1;
+        }for (; dinero + 10 <= cantidad; dinero += 10) {
+            billete10 = billete10 + 1;
+        }for (; dinero + 5 <= cantidad; dinero += 5) {
+            billete5 = billete5 + 1;
+        }
+
+        System.out.println("Se ha utilizado:\n" +
+                "        billete de 5 = " + billete5 +"\n" +
+                "        billete de 10 = " + billete10 +"\n" +
+                "        billete de 20 = " + billete20 +"\n" +
+                "        billete de 50 = " + billete50 +"\n" +
+                "        billete de 100 = " + billete100 +"\n" +
+                "        billete de 200 = " + billete200 +"\n" +
+                "        billete de 500 = " + billete500 +"\n" );
+
+    }
 }
