@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    static void main(String[] args) {
 
         /*1. Escribe un programa que dé los “buenos días”.*/
 
@@ -128,14 +128,14 @@ public class Main {
 
         scan = new Scanner(System.in);
         System.out.println("Introduzca el primer numero");
-        int nu111 = scan.nextInt();
+        double nu111 = scan.nextInt();
         System.out.println("Introduzca el segundo numero");
-        int nu112 = scan.nextInt();
+        double nu112 = scan.nextInt();
 
-        int suma1 = nu111 + nu112;
-        int res1 = nu111 - nu112;
-        int multi1 = nu111 * nu112;
-        int div1 = nu111 / nu112;
+        double suma1 = nu111 + nu112;
+        double res1 = nu111 - nu112;
+        double multi1 = nu111 * nu112;
+        double div1 = nu111 / nu112;
 
         System.out.println("La suma es igual a " + suma1);
         System.out.println("La resta es igual a " + res1);
@@ -151,7 +151,7 @@ public class Main {
         System.out.println("Introduzca el segundo numero");
         int numero12b = scan.nextInt();
 
-        int numero12c = Math.max( numero1, numero2);
+        int numero12c = Math.max( numero12a, numero12b);
 
         System.out.println("El numero " + numero12c + " es mayor");
 
@@ -159,10 +159,10 @@ public class Main {
         consideraremos el cero como positivo.*/
 
         scan = new Scanner(System.in);
-        System.out.println("Introduzca el numero numero");
+        System.out.println("Introduzca el numero");
         int numero13a = scan.nextInt();
 
-        System.out.println("El numeroe es positivo " + (numero13a >= 0));
-        System.out.println("El numeroe es negativo " + (numero13a < 0));
+        System.out.println("El numero es positivo " + (numero13a >= 0));
+        System.out.println("El numero es negativo " + (numero13a < 0));
     }
 }
