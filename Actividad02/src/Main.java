@@ -127,15 +127,18 @@ public class Main {
 
 /*10. Realiza un programa que lea 10 números no nulos y luego muestre un mensaje de si ha leído algún número negativo o no.*/
         System.out.println("Ejercicio 10  ");
-        int num10 = 0;
+        int contador = 0;
         int negativo10 = 0;
 
-        for (int i = 1; i <= 10 ; i++) {
+        while (contador <= 10) {
             scan = new Scanner(System.in);
             System.out.println("Introduzca un numero ");
-            num10 = scan.nextInt();
-            if (num10 > 0) {
-                negativo10 = negativo10 + 1;
+            int num10 = scan.nextInt();
+            if (num10 != 0) {
+                contador++;
+                if(num10 < 0){
+                    negativo10++;
+            }
 
             }
         }
@@ -152,18 +155,21 @@ public class Main {
         int num11 = 0;
         int positivos = 0;
         int negativos = 0;
+        int contador11 = 0;
 
-        for (int i = 1; i <= 10 ; i++) {
+        while (contador11 <= 10) {
             scan = new Scanner(System.in);
             System.out.println("Introduzca un numero ");
             num11 = scan.nextInt();
+            if (num11 != 0) {
+                contador11++;
+                if(num11 < 0){
+                    negativos++;
+                }else {
+                    positivos++;
+                };
 
-            if (num11 < 0){
-                negativos = negativos + 1;
-            } else if (num11 >= 0){
-                positivos = positivos + 1;
             }
-
         }
 
         System.out.println("Hay " + positivos + " numeros positivos y " + negativos + " numeros negativos");
@@ -182,7 +188,7 @@ public class Main {
 
             if (num12 < 0){
                 negativos12 = negativos12 + 1;
-            } else if (num12 >= 0){
+            } else if (num12 > 0){
                 positivos12 = positivos12 + 1;
             }
 
@@ -193,8 +199,8 @@ public class Main {
 /*13. Realiza un programa que calcule y escriba la suma y el producto de los 10 primeros números naturales.*/
         System.out.println("Ejercicio 13  ");
 
-        int suma13 = 0;
-        int multi13 = 1;
+        double suma13 = 0;
+        double multi13 = 1;
         for (int i = 1; i <= 10 ; i++) {
             suma13 = suma13 + i;
            multi13 = multi13 * i;
@@ -211,24 +217,15 @@ public class Main {
 • Los siguientes 400 tienen un 25% de impuestos.
 • Los restantes un 45% de impuestos.
                 Escribir nombre, salario bruto, tasas y salario neto.*/
-/* 14. Escribe un programa que calcula el salario neto semanal de un trabajador en función del
-        número de horas trabajadas y la tasa de impuestos de acuerdo a las siguientes hipótesis:
-• Las primeras 35 horas se pagan a tarifa normal.
-• Las horas que pasen de 35 se pagan a 1,5 veces la tarifa normal.
-• Las tasas de impuestos son:
-• Los primeros 500 euros son libres de impuestos.
-• Los siguientes 400 tienen un 25% de impuestos.
-• Los restantes un 45% de impuestos.
-                Escribir nombre, salario bruto, tasas y salario neto.*/
         System.out.println("Ejercicio 14  ");
 
         scan = new Scanner(System.in);
         System.out.println("Introduzca el numero de horas trabajadas ");
-        int horas = scan.nextInt();
+        int horas = Math.abs(scan.nextInt());
 
         scan = new Scanner(System.in);
         System.out.println("Introduzca el precio por hora ");
-        int preciohora = scan.nextInt();
+        double preciohora = Math.abs(scan.nextInt());
         double cotizar = 0;
         double cotizado = 0;
         double primerimpuesto = 0;

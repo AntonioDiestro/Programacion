@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     static void main(String[] args) {
+        IO.println("Ejercicio 1");
         int billete5 = 0;
         int billete10 = 0;
         int billete20 = 0;
@@ -40,27 +41,28 @@ public class Main {
                 "        billete de 200 = " + billete200 +"\n" +
                 "        billete de 500 = " + billete500 +"\n" );
 
-
-      /*  2. Realiza un programa que muestre un menú de opciones como el siguiente:
+      /*2. Realiza un programa que muestre un menú de opciones como el siguiente:
         1. Sumar
         2. Restar
         3. Multiplicar
         4. Dividir (incluir manejo de división por 0)
         5. Salir
         El menú debe de repetirse hasta que se escoja la opción 5 (Salir)*/
-        System.out.println(" Operaciones "+
+        IO.println("Segundo ejercicio");
+
+        int operacion = 0;
+        do {
+        System.out.println(" Operaciones \n"+
         "1. Sumar \n" +
         "2. Restar; \n" +
         "3. Multiplicar; \n" +
         "4. Dividir (incluir manejo de división por 0); \n" +
         "5. Salir ");
 
-
         scan = new Scanner(System.in);
         System.out.println("Introduce la operacion ");
-        int operacion = scan.nextInt();
+        operacion = scan.nextInt();
 
-        do {
             switch (operacion) {
                 case 1:
                     scan = new Scanner(System.in);
@@ -111,9 +113,4 @@ public class Main {
             }
         }while(operacion != 5);
         }
-
-
-
     }
-
-
