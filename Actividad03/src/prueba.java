@@ -6,7 +6,7 @@ public class prueba {
         int operacion = 0;
 
         do{
-            System.out.println(" Operaciones " +
+            System.out.println(" Operaciones \n" +
                     "1. Sumar \n" +
                     "2. Restar; \n" +
                     "3. Multiplicar; \n" +
