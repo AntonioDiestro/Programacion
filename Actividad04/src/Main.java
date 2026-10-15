@@ -41,16 +41,22 @@ el máximo y mínimo y mostrarlos por pantalla  */
 
         IO.println("Ejercicio3");
 
-        int array3[] = new int[10];
+        double array3[] = new double[10];
         scan = new Scanner(System.in);
+        double maximo3 = - Double.MAX_VALUE;
+        double minimo3 = Double.MAX_VALUE;
+        double max3 = 0.0;
+        double min3 = 0.0;
 
         for (int i = 0; i < array3.length; i++) {
             System.out.println("Introduzca un numero: ");
             array3[i] = scan.nextInt(); //Dar el valor del scanner a cada celda del array;
+            max3 = Math.max(array3[i], maximo3);
+            min3 = Math.max(array3[i], minimo3);
         }
         Arrays.sort(array3);
-        IO.println("El numero menor es " + array3[0]);
-        IO.println("El numero mayor es " + array3[9]);
+        IO.println("El numero menor es " + min3);
+        IO.println("El numero mayor es " + max3);
 
 /*4. Crea un programa que pida veinte números enteros por teclado, los almacene en un array y luego muestre por separado
 la suma de todos los valores positivos y negativos.*/
@@ -73,18 +79,18 @@ la suma de todos los valores positivos y negativos.*/
         IO.println("La suma de los negativos es " + negativos);
 
 /*5. Crea un programa que pida veinte números reales por teclado, los almacene en un array y luego lo recorra para calcular
-y mostrar la media: (suma de valores) / nº de valores.*/
+y mostrar la media: (suma de valores) / n.º de valores.*/
 
         IO.println("Ejercicio5");
 
-        int array5[] = new int[20];
+        double array5[] = new double[20];
         scan = new Scanner(System.in);
-        int suma5 = 0;
-        int media = 0;
+        double suma5 = 0;
+        double media = 0;
 
         for (int i = 0; i < array5.length; i++) {
             System.out.println("Introduzca un numero: ");
-            array5[i] = scan.nextInt();
+            array5[i] = scan.nextDouble();
             suma5 += array5[i];
         }
         media = suma5 / array5.length;
@@ -115,9 +121,13 @@ y lo muestre por pantalla.*/
         IO.println("Introduce el valor Q");
         int valorq7 = scan.nextInt();
 
-        int array7[] = new int[(valorq7 - valorp7) + 1]; //La longitud sera la diferencia mas 1 para que coja todos los numeros
-        for (int i = 0; i < array7.length; i++) { //For para que recorra todas las posiciones del array
-            array7[i] = valorp7++; //Que empieze a dar numeros en el numero p y sume de uno en uno
+        int array7[] = new int[Math.abs((valorq7 - valorp7) + 1)]; //La longitud sera la diferencia mas 1 para que coja todos los numeros
+        for (int i = 0; i < array7.length; i++) {//For para que recorra todas las posiciones del array
+            if (valorq7 > valorp7) {
+                array7[i] = valorp7 + i; //Que empieze a dar numeros en el numero p y sume de uno en uno
+            }else{
+                array7[i] = valorq7 + i;
+            }
         }
         System.out.println(Arrays.toString(array7));//Imprimimos array
 
@@ -142,24 +152,24 @@ le pida al usuario un valor real R. Por último, mostrará cuántos valores del 
         }
         IO.println(("Hay " + contador8 + " numeros superiores a " + numeror8));
 
-/*9. Crea un programa que cree un array de enteros de tamaño 100 y lo rellene con valores  enteros aleatorios entre 1 y 10
+/*9. Crea un programa que cree un array de enteros de tamaño 100 y lo rellene con valores enteros aleatorios entre 1 y 10
 (utiliza 1 + Math.random()*10). Luego pedirá un valor N y mostrará en qué posiciones del array aparece N.*/
         IO.println("Ejercicio9");
 
         scan = new Scanner(System.in);
         IO.println("Introduce el valor N");
         int valorn9 = scan.nextInt();
-        int iguales9 = 0;
 
         int array9[] = new int [100];
         for (int  i = 0; i < array9.length; i++) {
             array9[i] = (int) (1 + Math.random() * 10);
             if(array9[i] == valorn9){
+                IO.println("El numero se encuentra en la posicion " + i);
 
             }
         }
 
-/*10. Crea un programa para realizar cálculos relacionados con la altura (en metros) de  personas.
+/*10. Crea un programa para realizar cálculos relacionados con la altura (en metros) de personas.
 Pedirá un valor N y luego almacenará en un array N alturas introducidas por teclado. Luego mostrará la altura media, máxima y mínima,
 así como cuántas personas miden por encima y por debajo de la media.*/
         IO.println("Ejercicio10");
@@ -277,7 +287,7 @@ que el usuario elija la opción ‘c’ que terminará el programa.
   arrray y luego mostrarla. Una secuencia aritmética es una serie de números que
   comienza por un valor inicial V, y continúa con incrementos de I. Por ejemplo, con V=1
   e I=2, la secuencia sería 1, 3, 5, 7, 9… Con V=7 e I=10, la secuencia sería 7, 17, 27, 37… El
-  programa solicitará al usuario V, I además de N (nº de valores a crear).*/
+  programa solicitará al usuario V, I además de N (n.º de valores a crear).*/
 
         scan = new Scanner(System.in);
         IO.println("Introduce el valor inicial");
