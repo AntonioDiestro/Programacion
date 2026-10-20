@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Locale;
 import java.util.Scanner;
 import java.lang.String;
 
@@ -7,6 +8,7 @@ public class Main {
     static void main(String[] args) {
 
 /*1. Crea un programa que pida una cadena de texto por teclado y luego muestre cada palabra de la cadena en una línea distinta. */
+        IO.println("Ejercicio1");
 
         Scanner sc = new Scanner(System.in);
         IO.println("Introduce una cadena de texto");
@@ -19,6 +21,7 @@ public class Main {
 
 /*2. Crea un programa que pida dos cadenas de texto por teclado y luego indique si son iguales, además de si son iguales
  sin diferenciar entre mayúsculas y minúsculas.*/
+        IO.println("Ejercicio2");
 
         sc = new Scanner(System.in);
         IO.println("Introduce una cadena de texto");
@@ -37,6 +40,7 @@ public class Main {
 /*3. Crea un programa que pida por teclado tres cadenas de texto: nombre y dos apellidos Luego mostrará un código de usuario
 (en mayúsculas) formado por la concatenación de las tres primeras letras de cada uno de ellos. Por ejemplo, si se introduce “Lionel”,
 “Tarazón” y “Alcocer” mostrará “LIOTARALC”.*/
+        IO.println("Ejercicio3");
 
         sc = new Scanner(System.in);
         IO.println("Introduce el nombre");
@@ -46,9 +50,9 @@ public class Main {
         IO.println("Introduce el segundo apellido");
         String textoE3B =  sc.nextLine();
 
-        String textosE3 = textoE3.substring(0,2);
-        String textosE3A = textoE3A.substring(0,2);
-        String textosE3B = textoE3B.substring(0,2);
+        String textosE3 = textoE3.substring(0,3);
+        String textosE3A = textoE3A.substring(0,3);
+        String textosE3B = textoE3B.substring(0,3);
 
         String textofinal3 = textosE3+textosE3A+textosE3B;
 
@@ -56,6 +60,7 @@ public class Main {
 
 /*4. Crea un programa que muestre por pantalla cuantas vocales de cada tipo hay (cuantas ‘a’, cuantas ‘e’, etc.) en una frase introducida
        por teclado. No se debe diferenciar entre mayúsculas y minúsculas*/
+        IO.println("Ejercicio4");
 
         int contadora4 = 0;
         int contadore4 = 0;
@@ -96,24 +101,26 @@ public class Main {
         Supondremos que el usuario solo introducirá letras y espacios (ni comas, ni puntos, ni
                 acentos, etc.). Un palíndromo es un texto que se lee igual de izquierda a derecha que de
         derecha a izquierda. */
+        IO.println("Ejercicio5");
 
         sc = new Scanner(System.in);
         IO.println("Introduce un texto");
-        String textoE5 =  sc.nextLine();
+        String textoE5 = sc.nextLine();
 
-        char arrayE5[]=textoE5.toCharArray();
-        char arrayE5A[]= textoE5.toCharArray();
+        String textocambiadoE5 = textoE5.replace(" ", "").toLowerCase();
 
-        for (int i = arrayE5.length - 1; i > 0; i--){
-            arrayE5A[arrayE5.length -  1 -i] = arrayE5[i];
+        char arrayE5[] = textocambiadoE5.toCharArray();
+        char arrayE5A[] = new char[arrayE5.length];
+
+        for (int i = arrayE5.length - 1; i >= 0; i--) {
+            arrayE5A[arrayE5.length - 1 - i] = arrayE5[i];
         }
 
-        if(arrayE5.equals(arrayE5A)){
+        if (Arrays.equals(arrayE5, arrayE5A)) {
             IO.println("Es un palindromo");
-        }else{IO.println("No es un palindromo");}
-
-
-
+        } else {
+            IO.println("No es un palindromo");
+        }
 
 
     }
