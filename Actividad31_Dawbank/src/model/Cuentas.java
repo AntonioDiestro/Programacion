@@ -3,32 +3,33 @@ package model;
 public class Cuentas {
 
     //Atributos de las cuentas bancarias
-    private int numcuenta;
+    public static String numcuenta;
     private final String IBAN;
     private String Titular;
-    private int Saldo;
-    public Movimientos[];
+    public static int Saldo;
+    public Movimientos[] movimientos;
 
-
-    private int MovIni = 100;
     private int contmovact;
 
 
     //Constructor
-    public Cuentas(int numcuenta, String IBAN, String Titular) {
+    public Cuentas(String numcuenta, String IBAN, String Titular) {
         this.numcuenta = numcuenta;
         this.IBAN = IBAN;
         this.Titular = Titular;
         this.Saldo = 0;
-        this.movimientos =
+        this.movimientos =  new Movimientos[100];
         this.contmovact = 0;
     }
 
+
+
+
     //Datos cuenta
-    public String getCuentas(){
-        return this.IBAN;
-        return this.Titular;
-        return this.Saldo;
+    public String getCuentas() {
+        return "IBAN: " + this.IBAN + "\n" +
+                "Titular: " + this.Titular + "\n" +
+                "Saldo: " + this.Saldo;
     }
 
     //Pedir IBAN
@@ -45,8 +46,6 @@ public class Cuentas {
     public int getSaldo() {
         return this.Saldo;
     }
-
-
 
 
 

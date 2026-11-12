@@ -1,22 +1,29 @@
 package model;
-
+import java.util.Scanner;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 public class Movimientos {
-        private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+    public String numcuenta;
+    private LocalDate fechahora;
+    private Movimiento tipomov;
+    private int Cantidad;
 
-        private String Codigo;
-        private LocalDate fechahora;
-        private Movimiento movimiento;
-        private int Cantidad;
-
-    public Movimientos(String Codigo, Movimiento movimiento, int Cantidad) {
-        this.Codigo = Codigo;
+    public Movimientos(String numcuenta, int Cantidad) {
+        this.numcuenta = Cuentas.numcuenta;
         this.fechahora = fechahora;
-        this.movimiento = movimiento;
+        this.tipomov = Movimiento.Ingreso;
         this.Cantidad = Cantidad;
     }
+
+
+
+
 }
+
+
+
+
+
 

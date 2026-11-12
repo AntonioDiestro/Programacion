@@ -1,7 +1,13 @@
+import model.Cuentas;
+import model.Movimiento;
+import model.Movimientos;
+
 import java.util.Scanner;
 
 
 public class Main {
+
+    static Cuentas C1 = new Cuentas("C1","ES3754267835826845737313", "Asier Villalibre");
     static void main(String[] args) {
 
         int opcion = 0;
@@ -24,15 +30,33 @@ public class Main {
             switch (opcion) { //Creamos el switch de eleccion
 
                 case 1:
-                    IO.println(getIBAN());
+                    IO.println(C1.getCuentas());
+                    break;
 
                 case 2:
+                    IO.println(C1.getIBAN());
+                    break;
 
                 case 3:
+                    IO.println(C1.getTitular());
+                    break;
 
                 case 4:
+                    IO.println(C1.getSaldo());
+                    break;
 
                 case 5:
+
+                    sc = new Scanner(System.in);
+                    IO.println("Introduce el numero de la cuenta");
+                    String Cuentaingreso = sc.nextLine();
+
+                    IO.println("Introduce la cantidad a ingresar");
+                    int Cantingreso = sc.nextInt();
+
+                    Movimientos M1 = new Movimientos(Cuentaingreso, Cantingreso);
+                    Cuentas.Saldo += Cantingreso;
+                    break;
 
                 case 6:
 
@@ -45,4 +69,8 @@ public class Main {
 
         }while (opcion != 8) ;
     }
+
+
+
+
 }
