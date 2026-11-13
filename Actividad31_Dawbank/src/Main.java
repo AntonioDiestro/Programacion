@@ -1,5 +1,4 @@
 import model.Cuentas;
-import model.Movimiento;
 import model.Movimientos;
 
 import java.util.Scanner;
@@ -8,6 +7,7 @@ import java.util.Scanner;
 public class Main {
 
     static Cuentas C1 = new Cuentas("C1","ES3754267835826845737313", "Asier Villalibre");
+    static Movimientos M1 = new Movimientos();
     static void main(String[] args) {
 
         int opcion = 0;
@@ -46,21 +46,16 @@ public class Main {
                     break;
 
                 case 5:
-
-                    sc = new Scanner(System.in);
-                    IO.println("Introduce el numero de la cuenta");
-                    String Cuentaingreso = sc.nextLine();
-
-                    IO.println("Introduce la cantidad a ingresar");
-                    int Cantingreso = sc.nextInt();
-
-                    Movimientos M1 = new Movimientos(Cuentaingreso, Cantingreso);
-                    Cuentas.Saldo += Cantingreso;
+                    M1.Ingresar(C1);
                     break;
 
                 case 6:
+                    M1.Retirar(C1);
+                    break;
+
 
                 case 7:
+
 
                 case 8:
                     IO.println("Cerrando programa...");

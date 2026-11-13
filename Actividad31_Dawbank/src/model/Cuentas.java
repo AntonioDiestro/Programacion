@@ -22,9 +22,6 @@ public class Cuentas {
         this.contmovact = 0;
     }
 
-
-
-
     //Datos cuenta
     public String getCuentas() {
         return "IBAN: " + this.IBAN + "\n" +
@@ -46,7 +43,5 @@ public class Cuentas {
     public int getSaldo() {
         return this.Saldo;
     }
-
-
 
 }

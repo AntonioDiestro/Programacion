@@ -1,5 +1,5 @@
 package model;
 
-public enum Movimiento {
+public enum TipoMov {
     Ingreso, retirada
 }
