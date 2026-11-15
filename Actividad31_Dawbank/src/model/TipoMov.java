@@ -1,5 +1,5 @@
 package model;
 
 public enum TipoMov {
-    Ingreso, retirada
+    Ingreso, Retirada
 }

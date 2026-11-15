@@ -7,7 +7,6 @@ import java.util.Scanner;
 public class Main {
 
     static Cuentas C1 = new Cuentas("C1","ES3754267835826845737313", "Asier Villalibre");
-    static Movimientos M1 = new Movimientos();
     static void main(String[] args) {
 
         int opcion = 0;
@@ -46,16 +45,16 @@ public class Main {
                     break;
 
                 case 5:
-                    M1.Ingresar(C1);
+                    C1.Ingresar(C1);
                     break;
 
                 case 6:
-                    M1.Retirar(C1);
+                    C1.Retirar(C1);
                     break;
 
-
                 case 7:
-
+                    C1.mostrarMovimientos();
+                    break;
 
                 case 8:
                     IO.println("Cerrando programa...");

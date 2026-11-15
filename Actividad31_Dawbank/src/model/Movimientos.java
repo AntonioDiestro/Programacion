@@ -10,49 +10,18 @@ public class Movimientos {
     private TipoMov tipomov;
     private int Cantidad;
 
-    public Movimientos() {
+    public Movimientos(TipoMov TipoMov, int Cantidad) {
         this.numcuenta = numcuenta;
         this.fechahora = fechahora;
-        this.tipomov = TipoMov.Ingreso;
+        this.tipomov = TipoMov;
         this.Cantidad = Cantidad;
     }
 
+    public void mostrarInfoMovimiento() {
+        System.out.println("Nº Cuenta: " + numcuenta);
+        System.out.println("Fecha: " + fechahora);
+        System.out.println("Tipo: " + tipomov);
+        System.out.println("Cantidad: " + Cantidad);
 
-    public void Ingresar(Cuentas cuenta) {
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("Cantidad a ingresar:");
-        int cantidad = sc.nextInt();
-
-        Cuentas.Saldo += cantidad;
     }
-
-    public void Retirar(Cuentas cuenta) {
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("Cantidad a retirar:");
-        int cantidad = sc.nextInt();
-
-        if (cantidad <= Cuentas.Saldo && cantidad > 0) {
-            Cuentas.Saldo -= cantidad;
-            System.out.println("Retirada realizada.");
-        } else {
-            System.out.println("Saldo insuficiente o cantidad incorrecta.");
-        }
-    }
-
-
 }
-
-
-
-/*
-
-
-Movimientos M1 = new Movimientos(Cantingreso);
-Cuentas.Saldo += Cantingreso;
-                    break;
-
-
-
-*/
