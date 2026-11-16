@@ -54,12 +54,14 @@ public class Cuentas {
         int cantidad = sc.nextInt();
 
         Cuentas.Saldo += cantidad;
+        if (cantidad > 3000){
+            IO.println("Avisar a hacienda");
+        }
 
         movimientos[contmovact] =
                 new Movimientos(TipoMov.Ingreso, cantidad);
         contmovact++;
     }
-
 
     public void Retirar(Cuentas cuenta) {
         Scanner sc = new Scanner(System.in);
@@ -67,16 +69,23 @@ public class Cuentas {
         System.out.println("Cantidad a retirar:");
         int cantidad = sc.nextInt();
 
-        if (cantidad <= Cuentas.Saldo && cantidad > 0) {
-            Cuentas.Saldo -= cantidad;
-            System.out.println("Retirada realizada.");
-        } else {
-            System.out.println("Saldo insuficiente o cantidad incorrecta.");
-        }
+        if (cantidad > 0) {
+            if ((Cuentas.Saldo - cantidad) <= -50) {
+                IO.println("Aviso: Saldo negativo");
 
-        movimientos[contmovact] =
-                new Movimientos(TipoMov.Retirada, cantidad);
-        contmovact++;
+            }
+
+            else {
+                Cuentas.Saldo -= cantidad;
+                System.out.println("Retirada realizada.");
+                movimientos[contmovact] =
+                        new Movimientos(TipoMov.Retirada, cantidad);
+                contmovact++;
+            }
+        }
+        else{
+            System.out.println("La retirada no puede ser inferior a 0");
+        }
     }
 
 

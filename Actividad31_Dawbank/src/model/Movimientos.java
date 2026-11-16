@@ -1,27 +1,29 @@
 package model;
 
-
-import java.time.LocalDate;
-import java.util.Scanner;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Movimientos {
-    public String numcuenta;
-    private LocalDate fechahora;
+    private LocalDateTime fechahora;
     private TipoMov tipomov;
     private int Cantidad;
 
     public Movimientos(TipoMov TipoMov, int Cantidad) {
-        this.numcuenta = numcuenta;
-        this.fechahora = fechahora;
+
+        this.fechahora = LocalDateTime.now();;
         this.tipomov = TipoMov;
         this.Cantidad = Cantidad;
     }
 
     public void mostrarInfoMovimiento() {
-        System.out.println("Nº Cuenta: " + numcuenta);
-        System.out.println("Fecha: " + fechahora);
-        System.out.println("Tipo: " + tipomov);
-        System.out.println("Cantidad: " + Cantidad);
+
+        DateTimeFormatter formato =
+                DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+
+        IO.println("Fecha: " + fechahora.format(formato));
+        IO.println("Tipo: " + tipomov);
+        IO.println("Cantidad: " + Cantidad);
+        IO.println("-----------------------------------");
 
     }
 }
