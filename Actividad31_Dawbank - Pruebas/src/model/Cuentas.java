@@ -18,7 +18,6 @@ public class Cuentas {
         this.numcuenta = numcuenta;
         this.IBAN = IBAN;
         this.Titular = Titular;
-        this.Saldo = 0;
         this.movimientos =  new Movimientos[100];
         this.contmovact = 0;
     }
@@ -45,7 +44,7 @@ public class Cuentas {
         return this.Saldo;
     }
 
-    public void Ingresar(Cuentas numcuenta) {
+    public void Ingresar(Cuentas cuentas) {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Cantidad a ingresar:");

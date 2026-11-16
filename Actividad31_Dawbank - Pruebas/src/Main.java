@@ -14,7 +14,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int opcion = 0;
         IO.print("Introduce el numero de cuenta");
-        Cuentas cuenta = C1;
+        Cuentas cuenta = C2;
         int seleccion = sc.nextInt();
 
         switch (seleccion) {
