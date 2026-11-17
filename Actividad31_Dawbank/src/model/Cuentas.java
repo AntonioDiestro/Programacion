@@ -7,7 +7,7 @@ public class Cuentas {
     //Atributos de las cuentas bancarias
     public static String numcuenta;
     private final String IBAN;
-    private String Titular;
+    private final String Titular;
     public static int Saldo;
 
     private final Movimientos[] movimientos;
@@ -20,7 +20,7 @@ public class Cuentas {
         this.numcuenta = numcuenta;
         this.IBAN = IBAN;
         this.Titular = Titular;
-        this.Saldo = 0;
+        this.Saldo = Saldo;
         this.movimientos =  new Movimientos[100];
         this.contmovact = 0;
     }
@@ -33,6 +33,7 @@ public class Cuentas {
     }
 
     //Pedir IBAN
+
     public String getIBAN() {
         return this.IBAN;
     }
@@ -81,6 +82,9 @@ public class Cuentas {
                 movimientos[contmovact] =
                         new Movimientos(TipoMov.Retirada, cantidad);
                 contmovact++;
+                if (cantidad > 3000){
+                    IO.println("Avisar a hacienda");
+                }
             }
         }
         else{

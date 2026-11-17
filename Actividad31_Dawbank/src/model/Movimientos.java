@@ -17,8 +17,7 @@ public class Movimientos {
 
     public void mostrarInfoMovimiento() {
 
-        DateTimeFormatter formato =
-                DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+        DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
 
         IO.println("Fecha: " + fechahora.format(formato));
         IO.println("Tipo: " + tipomov);
