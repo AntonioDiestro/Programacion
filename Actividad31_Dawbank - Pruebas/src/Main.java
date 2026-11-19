@@ -107,6 +107,7 @@ public class Main {
                         IO.println("Cuenta no válida");
                         break;
                 }
+                break;
         }
 
     } while (opcion != 8);
