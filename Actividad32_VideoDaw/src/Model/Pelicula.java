@@ -12,5 +12,15 @@ public class Pelicula {
     private LocalDateTime fechaalquiler;
     private boolean IsAlquilada;
 
-public Pelicula(int ID)
+public Pelicula(int ID, String titulo, LocalDate fecha){
+    this.Id = Id;
+    this.titulo = titulo;
+    this.genero = genero;
+    this.fecha = fecha;
+    this.fechabaja = null;
+    this.fechaalquiler = LocalDateTime.now();
+    IsAlquilada = false;
+
+}
+
 }
