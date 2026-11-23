@@ -25,9 +25,8 @@ void main() {
             switch (opcion) { //Creamos el switch de eleccion
 
                 case 1:
-
-
-                    MiUtils.CrearVideoclub(String CIF, String Direccion);
+                    Scanner sc = new Scanner(System.in);
+                    sc = new Scanner(System.in);
                     break;
 
 

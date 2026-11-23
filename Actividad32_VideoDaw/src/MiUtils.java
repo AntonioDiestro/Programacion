@@ -2,10 +2,8 @@ import java.util.Scanner;
 public class MiUtils {
 
     public static void CrearVideoclub(String CIF, String Direccion) {
-        CIF = ("Introduce el titular de la cuenta");
-        Scanner sc = new Scanner(System.in);
-        Direccion = ("Introduce el titular de la cuenta");
-        sc = new Scanner(System.in);
+        String CIF = ("Introduce el titular de la cuenta");
+        String Direccion = ("Introduce el titular de la cuenta");
         new VideoDaw(CIF, Direccion);
     }
 }
