@@ -21,3 +21,4 @@ public class Cliente {
     PeliculasAlquiladas = new Pelicula[100];
     }
 }
+

@@ -1,3 +1,6 @@
+import Model.Genero;
+import Model.Pelicula;
+
 import java.util.Scanner;
 
 
@@ -25,17 +28,15 @@ void main() {
             switch (opcion) { //Creamos el switch de eleccion
 
                 case 1:
-                    Scanner sc = new Scanner(System.in);
-                    sc = new Scanner(System.in);
+
                     break;
-
-
-
                 case 2:
-
+                    Pelicula p1 = new Pelicula(1, "Hola", Genero.Terror);
+                    p1.AgregarPeli();
                     break;
 
                 case 3:
+                    IO.println(Arrays.toString(Pelicula.pelis));
 
                     break;
 

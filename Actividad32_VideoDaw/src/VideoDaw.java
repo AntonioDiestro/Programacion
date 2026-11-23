@@ -17,4 +17,15 @@ public class VideoDaw {
         this.PeliculasRegistradas = new Pelicula[100];
         this.ClientesRegistrados = new Cliente[100];
     }
+    int contadorpelis = 0;
+    int contadorclientes = 0;
+
+
+    public void AgregarPeli(){
+        PeliculasRegistradas[contadorpelis] = Pelicula.infoPelicula();
+        contadorpelis++;
+    }
+
+
+
 }
