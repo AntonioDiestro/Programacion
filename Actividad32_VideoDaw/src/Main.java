@@ -31,12 +31,11 @@ void main() {
 
                     break;
                 case 2:
-                    Pelicula p1 = new Pelicula(1, "Hola", Genero.Terror);
-                    p1.AgregarPeli();
+                    sc = new Scanner(System.in);
+                    Pelicula p1 = VideoDaw.AgregarPeli();
                     break;
 
                 case 3:
-                    IO.println(Arrays.toString(Pelicula.pelis));
 
                     break;
 
@@ -63,5 +62,6 @@ void main() {
 
         }while (opcion != 8) ;
     }
+
 
 

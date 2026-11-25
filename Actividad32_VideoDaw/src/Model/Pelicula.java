@@ -33,11 +33,8 @@ public class Pelicula {
     }
 
 
-    public void AgregarPeli() {
-        PeliculasRegistradas[contadorpelis] = Pelicula.infoPelicula();
-        contadorpelis++;
     }
-}
+
 /*
 
     }
