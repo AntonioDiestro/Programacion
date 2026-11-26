@@ -6,6 +6,8 @@ import java.util.Scanner;
 
 void main() {
 
+    int contadorvideoclubs = 0;
+
     final String ComprobarCIF = "[A-Z]{1}[0-9]{8}";
 
         int opcion = 0;
@@ -28,14 +30,38 @@ void main() {
             switch (opcion) { //Creamos el switch de eleccion
 
                 case 1:
+                    sc = new Scanner(System.in);
+                    IO.println("Introduce el CIF");
+                    String CIF = sc.nextLine();
+                    sc = new Scanner(System.in);
+                    IO.println("Introduce la Direccion");
+                    String Direccion = sc.nextLine();
 
                     break;
                 case 2:
                     sc = new Scanner(System.in);
-                    Pelicula p1 = VideoDaw.AgregarPeli();
+                    IO.println("Introduce el ID");
+                    int Id = sc.nextInt();
+                    sc = new Scanner(System.in);
+                    IO.println("Introduce el titulo");
+                    String titulo = sc.nextLine();
+                    titulo = titulo.toUpperCase();
+                    IO.println("Introduce el Genero (Terror, Aventura");
+                    String generoTexto = sc.nextLine();
+                    Genero Genero = Model.Genero.valueOf(generoTexto.toUpperCase());
+                    VideoDaw.PeliculasRegistradas[VideoDaw.contadorpelis] = new Pelicula(Id,titulo,Genero);
+
                     break;
 
                 case 3:
+                    sc = new Scanner(System.in);
+                    IO.println("Introduce el ID");
+                    Id = sc.nextInt();
+                    for (int i=0; i < VideoDaw.PeliculasRegistradas.length; i++ ){
+                        if (VideoDaw.PeliculasRegistradas.length[i] == Id){
+                        };
+
+                    };
 
                     break;
 

@@ -1,4 +1,5 @@
 package Model;
 
-public enum Genero { Terror
+public enum Genero { TERROR, AVENTURA;
+
 }

@@ -5,6 +5,7 @@ import Model.Pelicula;
 import java.time.LocalDate;
 import java.util.Scanner;
 
+
 public class VideoDaw {
     private String CIF;
     private String Direccion;
@@ -17,30 +18,31 @@ public class VideoDaw {
         this.Direccion = Direccion;
         this.FechaAlta = LocalDate.now();
         this.PeliculasRegistradas = new Pelicula[100];
-        this.ClientesRegistrados = new Cliente[100];
+        this.ClientesRegistrados = new Cliente[100] ;
     }
 
     static int contadorpelis = 0;
     int contadorclientes = 0;
 
-    public static Pelicula AgregarPeli() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Introduce el ID");
-        int ID = sc.nextInt();
+}
 
-        System.out.println("Introduce el Titulo:");
+
+/*
+    Scanner sc = new Scanner(System.in);
+    for(int i =0; i< PeliculasRegistradas.length; i++){
+        sc = new Scanner(System.in);
+
+        IO.println("Introduce el ID");
+        String Id = sc.nextLine();
+        IO.println("Introduce el titulo");
         String titulo = sc.nextLine();
-        IO.println("Pelicula añadida correctamente");
+        IO.println("Introduce el Genero");
+        String Genero = sc.nextLine();
 
-
-        PeliculasRegistradas[contadorpelis] = new Pelicula(ID, titulo, Genero.Terror);
-
+        VideoDaw.PeliculasRegistradas[i] = new Pelicula(Id,titulo,Genero);
     }
-}
+ */
 
 
 
 
-
-
-}
