@@ -3,7 +3,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class Pelicula {
-    private int Id;
+    public static int Id;
     private String titulo;
     private Genero genero;
     private LocalDate fecha;

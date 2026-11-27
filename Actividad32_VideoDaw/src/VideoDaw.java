@@ -24,6 +24,20 @@ public class VideoDaw {
     static int contadorpelis = 0;
     int contadorclientes = 0;
 
+
+public void ElimiarPeli(){
+    Scanner sc = new Scanner(System.in);
+    IO.println("Introduce el ID");
+    Pelicula.Id = sc.nextInt();
+    for (int i=0; i < VideoDaw.PeliculasRegistradas.length; i++ ){
+        if (PeliculasRegistradas[i].equals(Pelicula.Id){
+            PeliculasRegistradas[i] = null;
+        };
+
+    };
+
+}
+
 }
 
 

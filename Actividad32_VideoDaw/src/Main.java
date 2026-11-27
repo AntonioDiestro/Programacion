@@ -8,6 +8,7 @@ void main() {
 
     int contadorvideoclubs = 0;
 
+
     final String ComprobarCIF = "[A-Z]{1}[0-9]{8}";
 
         int opcion = 0;
@@ -59,6 +60,7 @@ void main() {
                     Id = sc.nextInt();
                     for (int i=0; i < VideoDaw.PeliculasRegistradas.length; i++ ){
                         if (VideoDaw.PeliculasRegistradas.length[i] == Id){
+                            VideoDaw.PeliculasRegistradas.length[i] = null;
                         };
 
                     };
@@ -88,6 +90,7 @@ void main() {
 
         }while (opcion != 8) ;
     }
+
 
 
 
